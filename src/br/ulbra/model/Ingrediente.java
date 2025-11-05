@@ -2,55 +2,91 @@
 package br.ulbra.model;
 
 public class Ingrediente {
-   private int Id_Ingrediente;  // PK
-    private String Nome;
-    private String Descricao;
+   private int idIngrediente;
+    private String produtos;
+    private String nomes;
+    private double quantidade;
+    private int unidadeMedida; // FK
+    private String informacoesNutricio;
+    private int idReceita;     // FK
 
-    // Construtor padrão
-    public Ingrediente() {}
-
-    // Construtor com parâmetros (opcional, mas útil)
-    public Ingrediente(int Id_Ingrediente, String Nome, String Descricao) {
-        this.Id_Ingrediente = Id_Ingrediente;
-        this.Nome = Nome;
-        this.Descricao = Descricao;
+    public Ingrediente(int idIngrediente, String produtos, String nomes, double quantidade, int unidadeMedida, String informacoesNutricio, int idReceita) {
+        this.idIngrediente = idIngrediente;
+        this.produtos = produtos;
+        this.nomes = nomes;
+        this.quantidade = quantidade;
+        this.unidadeMedida = unidadeMedida;
+        this.informacoesNutricio = informacoesNutricio;
+        this.idReceita = idReceita;
     }
 
-    // Getter e Setter para Id_Ingrediente
+    public Ingrediente() {
+    }
+
     public int getIdIngrediente() {
-        return Id_Ingrediente;
+        return idIngrediente;
     }
 
-    public void setIdIngrediente(int Id_Ingrediente) {
-        this.Id_Ingrediente = Id_Ingrediente;
+    public void setIdIngrediente(int idIngrediente) {
+        this.idIngrediente = idIngrediente;
     }
 
-    // Getter e Setter para Nome
-    public String getNome() {
-        return Nome;
+    public String getProdutos() {
+        return produtos;
     }
 
-    public void setNome(String Nome) {
-        this.Nome = Nome;
-    }
-    public void setDescriçao(String Descricao) {
-        this.Descricao = Descricao;
+    public void setProdutos(String produtos) {
+        this.produtos = produtos;
     }
 
-    // Getter e Setter para Descricao
-    public String getDescricao() {
-        return Descricao;
+    public String getNomes() {
+        return nomes;
     }
 
-    public void setDescricao(String Descricao) {
-        this.Descricao = Descricao;
+    public void setNomes(String nomes) {
+        this.nomes = nomes;
+    }
+
+    public double getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(double quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public int getUnidadeMedida() {
+        return unidadeMedida;
+    }
+
+    public void setUnidadeMedida(int unidadeMedida) {
+        this.unidadeMedida = unidadeMedida;
+    }
+
+    public String getInformacoesNutricio() {
+        return informacoesNutricio;
+    }
+
+    public void setInformacoesNutricio(String informacoesNutricio) {
+        this.informacoesNutricio = informacoesNutricio;
+    }
+
+    public int getIdReceita() {
+        return idReceita;
+    }
+
+    public void setIdReceita(int idReceita) {
+        this.idReceita = idReceita;
     }
 
     @Override
     public String toString() {
-        return "Ingrediente{" + "Id_Ingrediente=" + Id_Ingrediente + ", Nome=" + Nome + ", Descricao=" + Descricao + '}';
+        return "Ingrediente{" + "idIngrediente=" + idIngrediente + ", produtos=" + produtos + ", nomes=" + nomes + ", quantidade=" + quantidade + ", unidadeMedida=" + unidadeMedida + ", informacoesNutricio=" + informacoesNutricio + ", idReceita=" + idReceita + '}';
     }
+    
+    
 
+   
    
     
     

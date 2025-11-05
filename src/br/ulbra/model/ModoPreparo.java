@@ -2,57 +2,78 @@
 package br.ulbra.model;
 
 public class ModoPreparo {
-     private int idModoPreparo;   // PK
-    private String descricao;    // ex: "Misture os ingredientes secos"
-    private int ordem;           // posição do passo (1, 2, 3...)
-    private int receitaId;       // FK: ID da receita à qual este passo pertence
+   private int idModoPreparo;
+    private int idReceita;
+    private int numeroPasso;
+    private String descricaoPasso;
+    private String tempoEstimado;
+    private String imagem ; 
 
-    // Construtor padrão
-    public ModoPreparo() {}
+    public ModoPreparo() {
+    }
 
-    // Construtor com parâmetros
-    public ModoPreparo(int idModoPreparo, String descricao, int ordem, int receitaId) {
+    public ModoPreparo(int idModoPreparo, int idReceita, int numeroPasso, String descricaoPasso, String tempoEstimado, String imagem) {
         this.idModoPreparo = idModoPreparo;
-        this.descricao = descricao;
-        this.ordem = ordem;
-        this.receitaId = receitaId;
+        this.idReceita = idReceita;
+        this.numeroPasso = numeroPasso;
+        this.descricaoPasso = descricaoPasso;
+        this.tempoEstimado = tempoEstimado;
+        this.imagem = imagem;
     }
 
     public int getIdModoPreparo() {
         return idModoPreparo;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public int getOrdem() {
-        return ordem;
-    }
-
-    public int getReceitaId() {
-        return receitaId;
-    }
-
     public void setIdModoPreparo(int idModoPreparo) {
         this.idModoPreparo = idModoPreparo;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public int getIdReceita() {
+        return idReceita;
     }
 
-    public void setOrdem(int ordem) {
-        this.ordem = ordem;
+    public void setIdReceita(int idReceita) {
+        this.idReceita = idReceita;
     }
 
-    public void setReceitaId(int receitaId) {
-        this.receitaId = receitaId;
+    public int getNumeroPasso() {
+        return numeroPasso;
+    }
+
+    public void setNumeroPasso(int numeroPasso) {
+        this.numeroPasso = numeroPasso;
+    }
+
+    public String getDescricaoPasso() {
+        return descricaoPasso;
+    }
+
+    public void setDescricaoPasso(String descricaoPasso) {
+        this.descricaoPasso = descricaoPasso;
+    }
+
+    public String getTempoEstimado() {
+        return tempoEstimado;
+    }
+
+    public void setTempoEstimado(String tempoEstimado) {
+        this.tempoEstimado = tempoEstimado;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
     @Override
     public String toString() {
-        return "ModoPreparo{" + "idModoPreparo=" + idModoPreparo + ", descricao=" + descricao + ", ordem=" + ordem + ", receitaId=" + receitaId + '}';
+        return "ModoPreparo{" + "idModoPreparo=" + idModoPreparo + ", idReceita=" + idReceita + ", numeroPasso=" + numeroPasso + ", descricaoPasso=" + descricaoPasso + ", tempoEstimado=" + tempoEstimado + ", imagem=" + imagem + '}';
     }
+    
+    
     
 }

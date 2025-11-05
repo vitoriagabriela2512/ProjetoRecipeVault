@@ -1,15 +1,16 @@
-
 package br.ulbra.model;
 
-public class avaliacaoModel {
+import java.time.LocalDate;
+
+public class Avaliacao {
 private int id;
 private int idReceita;
 private int idUsuario;
 public int nota;
 public String comentario;
-public int data;
+private LocalDate data;
 
-    public avaliacaoModel(int id, int idReceita, int idUsuario, int nota, String comentario, int data) {
+    public Avaliacao(int id, int idReceita, int idUsuario, int nota, String comentario, LocalDate data) {
         this.id = id;
         this.idReceita = idReceita;
         this.idUsuario = idUsuario;
@@ -18,7 +19,7 @@ public int data;
         this.data = data;
     }
 
-    public avaliacaoModel() {
+    public Avaliacao() {
     }
 
     public int getId() {
@@ -41,7 +42,7 @@ public int data;
         return comentario;
     }
 
-    public int getData() {
+    public LocalDate getData() {
         return data;
     }
 
@@ -65,7 +66,7 @@ public int data;
         this.comentario = comentario;
     }
 
-    public void setData(int data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 

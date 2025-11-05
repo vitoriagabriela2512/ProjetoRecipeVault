@@ -5,9 +5,9 @@ package br.ulbra.DAO;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import br.ulbra.model.usuarioModel;
+import br.ulbra.model.Usuario;
 
-public class UsuarioDAO extends abstractDAO implements InterfaceDAO {
+public class UsuarioDAO extends AbstractDAO implements InterfaceDAO {
     private Connection conn;
 
     public UsuarioDAO(Connection conn) {
@@ -20,7 +20,7 @@ public class UsuarioDAO extends abstractDAO implements InterfaceDAO {
 
  
     // Salvar usuário
-    public void adicionar(usuarioModel u) throws SQLException {
+    public void adicionar(Usuario u) throws SQLException {
         String sql = "INSERT INTO usuario (nome, login, senha, idade) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, u.getNome());
@@ -47,13 +47,13 @@ public class UsuarioDAO extends abstractDAO implements InterfaceDAO {
     }
 
     // Buscar usuário pelo ID
-    public usuarioModel buscarPorId(int id) throws SQLException {
+    public Usuario buscarPorId(int id) throws SQLException {
         String sql = "SELECT * FROM usuario WHERE id = ?";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                return new usuarioModel(
+                return new Usuario(
                     rs.getInt("id"),
                     rs.getString("nome"),
                     rs.getString("email"),
@@ -66,13 +66,13 @@ public class UsuarioDAO extends abstractDAO implements InterfaceDAO {
     }
 
     // Listar todos os usuários
-    public List<usuarioModel> listar() throws SQLException {
-        List<usuarioModel> lista = new ArrayList<>();
+    public List<Usuario> listar() throws SQLException {
+        List<Usuario> lista = new ArrayList<>();
         String sql = "SELECT * FROM usuario";
         try (Statement stmt = conn.createStatement()) {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                lista.add(new usuarioModel(
+                lista.add(new Usuario(
                     rs.getInt("id"),
                     rs.getString("nome"),
                     rs.getString("email"),
@@ -84,7 +84,7 @@ public class UsuarioDAO extends abstractDAO implements InterfaceDAO {
         return lista;
     }
     
-      public void editar(usuarioModel u) throws SQLException {
+      public void editar(Usuario u) throws SQLException {
         String sql = "UPDATE usuario SET login = ?, nome = ?, ativo = ? WHERE id = ?";
         try (Connection con = getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
@@ -111,7 +111,7 @@ public class UsuarioDAO extends abstractDAO implements InterfaceDAO {
 
 
 
-    public usuarioModel autenticar(String trim, String senha) {
+    public Usuario autenticar(String trim, String senha) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

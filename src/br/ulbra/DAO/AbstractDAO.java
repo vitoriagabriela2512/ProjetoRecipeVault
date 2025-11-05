@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 
 
-  public abstract class abstractDAO {
+  public abstract class AbstractDAO {
       private static final String DRIVER = "com.mysql.jdbc.Driver"; //Driver JDBC
     private static final String URL = "jdbc:mysql://localhost:3306/recipevault";
     private static final String USER = "root"; // seu usuário do MySQL

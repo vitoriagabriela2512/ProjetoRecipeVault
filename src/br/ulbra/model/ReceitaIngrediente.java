@@ -5,58 +5,51 @@
  */
 package br.ulbra.model;
 
-/**
- *
- * @author aluno.saolucas
- */
+
 public class ReceitaIngrediente {
-    private int idReceitaIngrediente;  // PK (opcional em relacionamentos, mas você pediu)
-    private int receitaId;             // FK: ID da receita
-    private int ingredienteId;         // FK: ID do ingrediente
-    private double quantidade;         // ex: 250.0, 1.5, 3.0
-    private int unidadeMedidaId;       // FK: ID da unidade de medida (ex: 1 = "g", 2 = "ml")
+    private int id;
+    private int idReceita;
+    private int idIngrediente;
+    private double quantidade;
+    private int unidadeMedida;
+    private String observacao;
 
-    // Construtor padrão
-    public ReceitaIngrediente() {}
+    public ReceitaIngrediente() {
+    }
 
-    // Construtor com parâmetros
-    public ReceitaIngrediente(int idReceitaIngrediente, int receitaId, int ingredienteId, 
-                              double quantidade, int unidadeMedidaId) {
-        this.idReceitaIngrediente = idReceitaIngrediente;
-        this.receitaId = receitaId;
-        this.ingredienteId = ingredienteId;
+    public ReceitaIngrediente(int id, int idReceita, int idIngrediente, double quantidade, int unidadeMedida, String observacao) {
+        this.id = id;
+        this.idReceita = idReceita;
+        this.idIngrediente = idIngrediente;
         this.quantidade = quantidade;
-        this.unidadeMedidaId = unidadeMedidaId;
+        this.unidadeMedida = unidadeMedida;
+        this.observacao = observacao;
     }
 
-    // Getter e Setter para idReceitaIngrediente
-    public int getIdReceitaIngrediente() {
-        return idReceitaIngrediente;
+    public int getId() {
+        return id;
     }
 
-    public void setIdReceitaIngrediente(int idReceitaIngrediente) {
-        this.idReceitaIngrediente = idReceitaIngrediente;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    // Getter e Setter para receitaId
-    public int getReceitaId() {
-        return receitaId;
+    public int getIdReceita() {
+        return idReceita;
     }
 
-    public void setReceitaId(int receitaId) {
-        this.receitaId = receitaId;
+    public void setIdReceita(int idReceita) {
+        this.idReceita = idReceita;
     }
 
-    // Getter e Setter para ingredienteId
-    public int getIngredienteId() {
-        return ingredienteId;
+    public int getIdIngrediente() {
+        return idIngrediente;
     }
 
-    public void setIngredienteId(int ingredienteId) {
-        this.ingredienteId = ingredienteId;
+    public void setIdIngrediente(int idIngrediente) {
+        this.idIngrediente = idIngrediente;
     }
 
-    // Getter e Setter para quantidade
     public double getQuantidade() {
         return quantidade;
     }
@@ -65,20 +58,27 @@ public class ReceitaIngrediente {
         this.quantidade = quantidade;
     }
 
-    // Getter e Setter para unidadeMedidaId
-    public int getUnidadeMedidaId() {
-        return unidadeMedidaId;
+    public int getUnidadeMedida() {
+        return unidadeMedida;
     }
 
-    public void setUnidadeMedidaId(int unidadeMedidaId) {
-        this.unidadeMedidaId = unidadeMedidaId;
+    public void setUnidadeMedida(int unidadeMedida) {
+        this.unidadeMedida = unidadeMedida;
     }
 
-    // Método toString() útil para exibição (ex: ao listar ingredientes de uma receita)
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
+    }
+
     @Override
     public String toString() {
-        return quantidade + " (unid. " + unidadeMedidaId + ") do ingrediente " + ingredienteId;
-        // Mais tarde, você pode substituir os IDs por nomes usando DAOs
+        return "ReceitaIngrediente{" + "id=" + id + ", idReceita=" + idReceita + ", idIngrediente=" + idIngrediente + ", quantidade=" + quantidade + ", unidadeMedida=" + unidadeMedida + ", observacao=" + observacao + '}';
     }
+
+    
 
 }

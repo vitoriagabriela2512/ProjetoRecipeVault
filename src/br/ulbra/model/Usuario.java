@@ -1,13 +1,13 @@
 package br.ulbra.model;
 
-public class usuarioModel {
+public class Usuario {
 private int idUsuario;
 public String nome;
 public String senha;
 private String email;
 public String tipo;
 
-    public usuarioModel(int id, String nome, String senha, String email, String tipo) {
+    public Usuario(int id, String nome, String senha, String email, String tipo) {
         this.idUsuario = id;
         this.nome = nome;
         this.senha = senha;
@@ -15,7 +15,7 @@ public String tipo;
         this.tipo = tipo;
     }
 
-    public usuarioModel() {
+    public Usuario() {
     }
 
     public int getIdUsuario() {

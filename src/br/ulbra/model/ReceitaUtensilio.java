@@ -3,22 +3,17 @@ package br.ulbra.model;
 
 
 public class ReceitaUtensilio {
-        private int id;              // PK
-    private int idReceita;       // FK
-    private int idUtensilio;     // FK
-    private String uso;          // ex: "Misturar", "Assar", "Cortar"
-    private int quantidade;      // ex: 1 (usado uma vez), 2 (duas colheres, etc.)
+      private int id;
+    private int idReceita;
+    private int idUtensilio;
 
-    // Construtor padrão
-    public ReceitaUtensilio() {}
+    public ReceitaUtensilio() {
+    }
 
-    // Construtor com parâmetros
-    public ReceitaUtensilio(int id, int idReceita, int idUtensilio, String uso, int quantidade) {
+    public ReceitaUtensilio(int id, int idReceita, int idUtensilio) {
         this.id = id;
         this.idReceita = idReceita;
         this.idUtensilio = idUtensilio;
-        this.uso = uso;
-        this.quantidade = quantidade;
     }
 
     public int getId() {
@@ -45,29 +40,10 @@ public class ReceitaUtensilio {
         this.idUtensilio = idUtensilio;
     }
 
-    public String getUso() {
-        return uso;
-    }
-
-    public void setUso(String uso) {
-        this.uso = uso;
-    }
-
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
     @Override
     public String toString() {
-        return "ReceitaUtensilio{" + "id=" + id + ", idReceita=" + idReceita + ", idUtensilio=" + idUtensilio + ", uso=" + uso + ", quantidade=" + quantidade + '}';
+        return "ReceitaUtensilio{" + "id=" + id + ", idReceita=" + idReceita + ", idUtensilio=" + idUtensilio + '}';
     }
-
  
-   
-   
  
 }
