@@ -1,7 +1,6 @@
-# RecipeVault
-GameVault
+# RecipeVault🍛 
+## Sobre o Projeto:🌮
 > Nosso Projeto e o desenvolvimento de um RecipeVault, ou em linguagem comum, um site com a função de colocar e achar receitas para lhe ajudar na cozinha, e Um projeto em Grupo onde todos trabalharam e desenvolveram o projeto.
-Sobre o Projeto:
 Este repositório contém um projeto em Java, focando em
 conceitos essenciais da linguagem, como:
 - Programação orientada a objetos (POO)
@@ -11,13 +10,16 @@ conceitos essenciais da linguagem, como:
 O projeto visa consolidar o aprendizado e podem ser
 utilizados como portfólio profissional.
 ---
-Tecnologias Utilizadas:
+## Objetivo do Repositório:🍨
+- Este repositório serve como uma forma de demonstrar o avanço do trabalho, além de também apresentar a capacidade técnica da equipe na Conclusão Poo2
+---
+## Tecnologias Utilizadas:🧀😋
 - Java (JDK 17+ recomendado)
 - IDE: NetBeans 8.2
 - Git/GitHub para versionamento
 - Canva
 ---
-Banco de Dados:
+## Banco de Dados:🥤🍒
 
 ![WhatsApp Image 2025-11-13 at 10 35 24 (1)](https://github.com/user-attachments/assets/b71c43bd-a534-4348-8c89-043b89f12488)
 ![WhatsApp Image 2025-11-13 at 10 35 23](https://github.com/user-attachments/assets/ab94d938-2f4d-4cb4-8265-6e2d59639967)
@@ -25,12 +27,12 @@ Banco de Dados:
 
 
 ---
-Mockup do Projeto:
+## Mockup do Projeto:🍰
 
 <img width="632" height="357" alt="image" src="https://github.com/user-attachments/assets/c3fb5b49-bb0e-487a-8f5b-c050d65cfb1d" />
 
 ---
-Wireframe do Projeto
+## Wireframe do Projeto: 🟣🍧
 
 O design inicial da interface do GameVault foi desenvolvido no Canva.
 ![WhatsApp Image 2025-11-05 at 17 47 54](https://github.com/user-attachments/assets/b2c1e004-a782-46ce-acfe-a788e5cc5a11)
@@ -82,18 +84,15 @@ O design inicial da interface do GameVault foi desenvolvido no Canva.
   - `Bibliotecas/`
   - `Bibliotecas de Testes/`
 ---
-Como Executar:
+## Como Executar: 🍮
 1. **Clone o repositório**:
-```bash
-```
+
 2. **Abra o projeto em sua IDE favorita**.
 3. **Compile e execute** os arquivos `.java` conforme
 necessário.
+
 ```bash
-javac NomeDoArquivo.java
-java NomeDoArquivo
-```
-```
+
 
 CENTRO TECNOLÓGICO DA ULBRA
 Instituído pelo parecer do CEED/RS n.º.420/99
@@ -131,9 +130,4 @@ Email: aldreyfrancielle@gmail.com
 GitHub: https://github.com/AldreyFranciele
 —
 
-Objetivo do Repositório:
-Este repositório serve como uma forma de demonstrar o avanço do trabalho, além de também apresentar a capacidade técnica da equipe na Conclusão Poo2
----
-## ⚖️ Licença
-Este projeto está sob a licença MIT - veja o arquivo
-[LICENSE](LICENSE) para mais detalhes.
+
