@@ -19,7 +19,7 @@ utilizados como portfólio profissional.
 - Git/GitHub para versionamento
 - Canva
 ---
-## Banco de Dados:🥤🍒
+## Diagrama de classe:🥤🍒
 
 ![WhatsApp Image 2025-11-13 at 10 35 24 (1)](https://github.com/user-attachments/assets/b71c43bd-a534-4348-8c89-043b89f12488)
 ![WhatsApp Image 2025-11-13 at 10 35 23](https://github.com/user-attachments/assets/ab94d938-2f4d-4cb4-8265-6e2d59639967)
